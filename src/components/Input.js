@@ -31,7 +31,7 @@ STEP 5:
 
 STEP 6:
   For the input to reset correctly, it needs to "drink" its value from state!
-  We need to add an extra prop to the <input /> element like so: value={inputValue}
+  We need to add an extra prop(property/attribute) to the <input /> element like so: value={inputValue}
 */
 
 import React, {useState} from 'react'; /* STEP 0 */
@@ -44,10 +44,9 @@ export default function Input() {
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
     const { value } = evt.target;
-      setInputValue(value)
-      console.log(value)
     /* STEP 4 */
-    console.log(evt)
+    setInputValue(value)
+      console.log(value)
   };
   const reset = () => {
     /* STEP 5 */
